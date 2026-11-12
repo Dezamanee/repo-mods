@@ -8,16 +8,6 @@
 ----------
 Сборка ставится поверх чистой игры и добавляет:
 
-ВАЖНО: IncreaseDifficultyMod (пункт 4) не входит в сам репозиторий —
-его файл весит 119 МБ, а GitHub не принимает файлы больше 100 МБ.
-Скачай его из ассетов релиза:
-https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficultyMod.zip
-и положи архив в папку "Моды" перед установкой.
-Имя файла может быть любым, лишь бы в нём было IncreaseDifficultyMod:
-подойдёт и IncreaseDifficultyMod.zip, и WhitesLove-IncreaseDifficultyMod-0.10.3.zip.
-Страница релиза: https://github.com/Dezamanee/repo-mods/releases/tag/v1.0
-Без него сборка тоже работает (установщик пропустит этот мод).
-
 1) Магазинные предметы на локациях
    Shop Items Spawn in Level 1.7.21
    Улучшения, дроны и аптечки теперь можно найти прямо на уровне
@@ -47,27 +37,19 @@ https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficulty
    предмет превращается в деньги (возврат 60%).
    Работает и у хоста, и у клиентов. Настраивается в конфиге.
 
-4) Выбор сложности + доп. контент
-   IncreaseDifficultyMod 0.10.3
-   Настраиваемая сложность (пресеты и тонкая настройка), транквилизатор
-   Spritz, новые ценные предметы с физикой, оружие, дроны, улучшения,
-   чёрный рынок, статистика забега. Есть русский язык.
-   Сложность и все ползунки — в меню Mods (REPOConfig) или в
-   BepInEx\config\com.kubai.increasehardmod.cfg
-
-5) Новые вариации локаций
+4) Новые вариации локаций
    Interesting Levels 1.4.3
    Каждая карта ощущается новой: другие планировки, тематические
    комнаты с лутом, рискованные короткие пути, гнёзда монстров,
    джекпот-предметы и модификаторы уровня.
    Работает и с модовыми картами/предметами. Достаточно хоста.
 
-6) Новая локация
+5) Новая локация
    The Facility 1.1.7
    Отдельная кастомная карта в стиле игры + свои ценные предметы.
    Появляется в пуле уровней наравне с ванильными.
 
-7) Много новых предметов
+6) Много новых предметов
    JustOtakus Valuables 0.3.0
    Большой набор новых ценностей и предметов для переноски и продажи.
 
@@ -76,7 +58,7 @@ https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficulty
    Destiny, Minecraft, LEGO и др.) — находятся на уровнях и продаются
    как обычный лут.
 
-8) Предметы, с которыми можно взаимодействовать
+7) Предметы, с которыми можно взаимодействовать
    Usable Valuables 0.2.0
    Возьми ценность в руки и нажми E — фонарик, бумбокс, свеча, пилы,
    ловушки, огнемёт, палочки, камера. Некоторые предметы ведут себя
@@ -84,7 +66,7 @@ https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficulty
    ВАЖНО: часть фишек (губка, банан-лук) на игре 0.5.x не работает —
    мод писался под более старую версию. Остальные предметы работают.
 
-9) Фиксы текста и шрифтов
+8) Фиксы текста и шрифтов
    Russian Font Fix 1.0.1
    Лечит отрисовку кириллицы в официальном русском переводе и
    разводит названия улучшений по своим ячейкам, чтобы текст
@@ -159,7 +141,6 @@ DarkSpider90.TextUpgradesUIScale.cfg и nickklmao.repoconfig.cfg
        (+ REPORoles_assets1 и REPORoles_assets2 в ту же папку)
    BepInEx\plugins\Shop_Items_Spawn_in_Level\REPO_Shop_Items_in_Level.dll
    BepInEx\plugins\TruckSell\TruckSell.dll
-   BepInEx\plugins\IncreaseDifficultyMod\IncreaseDifficultyMod.dll
    BepInEx\plugins\InterestingLevels\InterestingLevels.dll
    BepInEx\plugins\TheFacility\TheFacility.repobundle
    BepInEx\plugins\JustOtakus_Valuables\JustOtakus_Valuables.dll
@@ -192,7 +173,6 @@ E              — использовать ценность в руках (Usab
   BepInEx\config\REPO_Shop_Items_in_Level.cfg   — шансы спавна
   BepInEx\config\com.trucksell.repo.cfg         — клавиша, % возврата
   BepInEx\config\R3Labs.Repo_Roles.Classic.cfg  — роли и кулдауны
-  BepInEx\config\com.kubai.increasehardmod.cfg  — сложность
 
 ----------------------------------------------------------
 МУЛЬТИПЛЕЕР
@@ -201,7 +181,6 @@ E              — использовать ценность в руках (Usab
 - Shop Items Spawn in Level: достаточно хоста.
 - Interesting Levels: достаточно хоста.
 - TruckSell: работает у всех, но настройки берутся с хоста.
-- IncreaseDifficultyMod: сложность задаёт хост.
 - The Facility, JustOtakus/SusScraps Valuables, Usable Valuables:
   контент появляется у всех, но стабильнее ставить всем одинаково.
 
@@ -239,7 +218,6 @@ REPOConfig                https://thunderstore.io/c/repo/p/nickklmao/REPOConfig/
 Shop Items Spawn in Level https://thunderstore.io/c/repo/p/itsUndefined/Shop_Items_Spawn_in_Level/
 REPORoles Classic         https://thunderstore.io/c/repo/p/R3Labs/REPORoles_Classic/
 TruckSell                 https://thunderstore.io/c/repo/p/Aartyns/TruckSell/
-IncreaseDifficultyMod     https://thunderstore.io/c/repo/p/WhitesLove/IncreaseDifficultyMod/
 Interesting Levels        https://thunderstore.io/c/repo/p/ExtraCreamyMilk/InterestingLevels/
 The Facility              https://thunderstore.io/c/repo/p/grey5525/TheFacility/
 JustOtakus Valuables      https://thunderstore.io/c/repo/p/JustOtaku/JustOtakus_Valuables/

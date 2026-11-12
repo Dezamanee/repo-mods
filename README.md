@@ -21,7 +21,6 @@
 | Usable Valuables | 0.2.0 | предметы с взаимодействием по клавише E |
 | Text Upgrades UI Scale | 1.4.1 | выравнивает и уменьшает список улучшений |
 | Russian Font Fix | 1.0.1 | исправляет кириллицу в русском переводе |
-| IncreaseDifficultyMod | 0.10.3 | сложность, экономика, враги, магазин — **скачать отдельно** |
 
 ## Установка
 
@@ -39,21 +38,10 @@
 
 Запусти `Удалить.bat` — он уберёт `BepInEx`, `winhttp.dll`, `doorstop_config.ini` и шпаргалку. Сейвы и настройки игры не трогаются.
 
-## IncreaseDifficultyMod (в релизе)
-
-Архив мода весит 119 МБ — обычным коммитом GitHub его не принимает (лимит 100 МБ на файл), поэтому он лежит в ассетах релиза:
-
-**https://github.com/Dezamanee/repo-mods/releases/tag/v1.0**
-
-Прямая ссылка на файл:
-https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficultyMod.zip
-
-Скачай его и положи в папку `Моды` перед установкой. Без него сборка тоже работает: установщик просто пропустит этот мод.
-
 ## Мультиплеер
 
 - REPORoles Classic — нужен всем игрокам в лобби, версии должны совпадать.
-- Shop Items, Interesting Levels, IncreaseDifficultyMod — достаточно хоста.
+- Shop Items, Interesting Levels — достаточно хоста.
 - TruckSell — настройки берутся с хоста.
 - Остальной контент стабильнее работает, если сборка стоит у всех.
 

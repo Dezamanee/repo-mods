@@ -112,59 +112,7 @@
 <tr><td><code>Activate Scout Ability</code> / <code>Show Spells</code> / <code>Healing Spell</code> / <code>Speed Spell</code> / <code>Overcharge Spell</code> / <code>Jump Boost Spell</code> / <code>Stamina Refill Spell</code> / <code>Charge Held Item</code></td><td>Клавиши способностей (Разведчик, Маг и т.д.)</td><td class="def">G / M / H / J / O / K / N / C</td></tr>
 </table>
 
-<h2>6. Сложность и экономика (IncreaseDifficultyMod)</h2>
-<p class="file">com.kubai.increasehardmod.cfg</p>
-<p>В моде 405 настроек. Ниже — главные, остальные лежат в тех же разделах файла.</p>
-
-<h3>Рост сложности</h3>
-<table class="tbl">
-<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
-<tr><td><code>RampStartLevel</code></td><td>С какого уровня начинается рост сложности</td><td class="def">4</td><td>1 — с самого начала</td></tr>
-<tr><td><code>RampLevelsPerStep</code></td><td>Через сколько уровней усиливать шаг</td><td class="def">1</td><td>2 — мягче</td></tr>
-<tr><td><code>HealthPerLevel</code></td><td>Прибавка HP врагов за уровень</td><td class="def">0.15</td><td>0.25 — жёстче</td></tr>
-<tr><td><code>HealthMaxMultiplier</code></td><td>Потолок HP врагов</td><td class="def">3</td><td>—</td></tr>
-<tr><td><code>DamagePerLevel</code></td><td>Прибавка урона врагов за уровень</td><td class="def">0.1</td><td>—</td></tr>
-<tr><td><code>SpeedPerLevel</code></td><td>Прибавка скорости врагов за уровень</td><td class="def">0.06</td><td>—</td></tr>
-<tr><td><code>RespawnFasterPerLevel</code></td><td>Насколько быстрее респавн за уровень</td><td class="def">0.08</td><td>—</td></tr>
-</table>
-
-<h3>Размер карты, враги, квота</h3>
-<table class="tbl">
-<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
-<tr><td><code>MapValuePerLevel</code></td><td>Рост стоимости лута за уровень</td><td class="def">0.02</td></tr>
-<tr><td><code>EnemyCountPerLevel</code></td><td>Прибавка количества врагов за уровень</td><td class="def">0.03</td></tr>
-<tr><td><code>EnemyCountStartLevel</code></td><td>С какого уровня добавляются враги</td><td class="def">8</td></tr>
-<tr><td><code>LevelSizePerLevel</code></td><td>Рост размера уровня за уровень</td><td class="def">0.03</td></tr>
-<tr><td><code>QuotaPerLevel</code></td><td>Рост квоты за уровень</td><td class="def">0.1</td></tr>
-<tr><td><code>QuotaMaxMultiplier</code></td><td>Потолок квоты</td><td class="def">5</td></tr>
-<tr><td><code>ExtractionBonusInterval</code></td><td>Каждые N уровней — доп. точка сдачи</td><td class="def">10</td></tr>
-<tr><td><code>MoonLevelsPerPhase</code></td><td>Уровней на фазу луны</td><td class="def">5</td></tr>
-</table>
-
-<h3>Магазин</h3>
-<table class="tbl">
-<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
-<tr><td><code>ExtraItems</code></td><td>Сколько доп. предметов в магазине</td><td class="def">4</td></tr>
-<tr><td><code>ExtraUpgrades</code></td><td>Сколько доп. улучшений в магазине</td><td class="def">3</td></tr>
-<tr><td><code>DuplicatesExtra</code></td><td>Доп. копии одинаковых предметов</td><td class="def">0</td></tr>
-<tr><td><code>PriceBaselinePlayers</code></td><td>Число игроков, от которого считается цена</td><td class="def">4</td></tr>
-<tr><td><code>PricePerExtraPlayer</code></td><td>Наценка за каждого игрока сверх</td><td class="def">0.15</td></tr>
-<tr><td><code>EventChancePercent</code></td><td>Шанс события экономики, %</td><td class="def">50</td></tr>
-</table>
-
-<h3>Прочее</h3>
-<table class="tbl">
-<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
-<tr><td><code>MaxPlayers</code></td><td>Максимум игроков в лобби</td><td class="def">6</td></tr>
-<tr><td><code>ShowSeconds</code></td><td>Сколько секунд показывать итоги раунда</td><td class="def">20</td></tr>
-<tr><td><code>ToggleKey</code></td><td>Клавиша итогов раунда</td><td class="def">F7</td></tr>
-<tr><td><code>Key</code> (раздел Black Market)</td><td>Клавиша чёрного рынка в магазине</td><td class="def">B</td></tr>
-<tr><td><code>ShrineChancePercent</code></td><td>Шанс появления алтаря (испытания), %</td><td class="def">100</td></tr>
-<tr><td><code>MinPlayerDistance</code></td><td>Дистанция, с которой лут не добивается, м</td><td class="def">20</td></tr>
-<tr><td><code>RevealOnMap</code></td><td>Показывать добранный лут на карте</td><td class="def">true</td></tr>
-</table>
-
-<h2>7. Вариации карт (Interesting Levels)</h2>
+<h2>6. Вариации карт (Interesting Levels)</h2>
 <p class="file">interestinglevels.repo.cfg</p>
 <table class="tbl">
 <tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
@@ -184,7 +132,7 @@
 <tr><td><code>Leave these levels alone</code></td><td>Карты без изменений (имена через запятую)</td><td class="def"></td><td>—</td></tr>
 </table>
 
-<h2>8. Используемые ценности (Usable Valuables)</h2>
+<h2>7. Используемые ценности (Usable Valuables)</h2>
 <p class="file">vibez.UsableValuables.cfg</p>
 <p>Настройки сгруппированы по предметам: <code>[BananaBow]</code>, <code>[Blender]</code>, <code>[Camera]</code> и т.д. В каждом разделе <code>Enabled</code> — включить поведение предмета. Часть настроек действует только у хоста.</p>
 <table class="tbl">
@@ -201,7 +149,6 @@
 <h2>Где лежат остальные настройки</h2>
 <table class="tbl">
 <tr><th>Файл</th><th>Мод</th></tr>
-<tr><td class="file">com.kubai.increasehardmod.cfg</td><td>Сложность, экономика, магазин, враги — 405 настроек</td></tr>
 <tr><td class="file">interestinglevels.repo.cfg</td><td>Генерация карт — 93 настройки</td></tr>
 <tr><td class="file">vibez.UsableValuables.cfg</td><td>Поведение предметов — 84 настройки</td></tr>
 <tr><td class="file">R3Labs.Repo_Roles.Classic.cfg</td><td>Роли — 47 настроек</td></tr>

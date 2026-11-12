@@ -155,7 +155,6 @@ $modMapping = [ordered]@{
     'REPORoles_Classic*.zip'         = @{ Folder = 'REPORoles_Classic';         Strip = $null }
     'Shop_Items_Spawn_in_Level*.zip' = @{ Folder = 'Shop_Items_Spawn_in_Level'; Strip = $null }
     'TruckSell*.zip'                 = @{ Folder = 'TruckSell';                 Strip = $null }
-    '*IncreaseDifficultyMod*.zip'    = @{ Folder = 'IncreaseDifficultyMod';     Strip = $null }
     'InterestingLevels*.zip'         = @{ Folder = 'InterestingLevels';         Strip = $null }
     'TheFacility*.zip'               = @{ Folder = 'TheFacility';               Strip = $null }
     'JustOtakus_Valuables*.zip'      = @{ Folder = 'JustOtakus_Valuables';      Strip = $null }
@@ -220,7 +219,5 @@ Write-Host "Бэкап старых файлов и конфигов: $backup"
 if ($missing.Count -gt 0) {
     Write-Host ''
     Write-Host ('Пропущены архивы: ' + ($missing -join ', ')) -ForegroundColor Yellow
-    Write-Host 'IncreaseDifficultyMod скачивается отдельно из релиза:' -ForegroundColor Yellow
-    Write-Host '  https://github.com/Dezamanee/repo-mods/releases/tag/v1.0'
 }
 Write-Host 'Запускайте игру через Steam.'
