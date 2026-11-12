@@ -12,7 +12,9 @@
 его файл весит 119 МБ, а GitHub не принимает файлы больше 100 МБ.
 Скачай его из ассетов релиза:
 https://github.com/Dezamanee/repo-mods/releases/download/v1.0/IncreaseDifficultyMod.zip
-и положи IncreaseDifficultyMod.zip в папку "Моды" перед установкой.
+и положи архив в папку "Моды" перед установкой.
+Имя файла может быть любым, лишь бы в нём было IncreaseDifficultyMod:
+подойдёт и IncreaseDifficultyMod.zip, и WhitesLove-IncreaseDifficultyMod-0.10.3.zip.
 Страница релиза: https://github.com/Dezamanee/repo-mods/releases/tag/v1.0
 Без него сборка тоже работает (установщик пропустит этот мод).
 
@@ -221,8 +223,11 @@ E              — использовать ценность в руках (Usab
    с Thunderstore (ссылки ниже) под новую версию.
 5. Steam «проверка целостности файлов» удалит моды — это нормально,
    просто поставьте сборку заново.
-6. Полное удаление модов: удалите папку BepInEx, файлы winhttp.dll
-   и doorstop_config.ini из папки игры.
+6. Полное удаление модов: запусти "Удалить.bat" (он уберёт папку BepInEx,
+   файлы winhttp.dll и doorstop_config.ini, а также шпаргалку).
+   Сейвы и настройки игры при этом не трогаются.
+   Ручной вариант: удалить папку BepInEx и файлы winhttp.dll,
+   doorstop_config.ini из папки игры.
 
 ----------------------------------------------------------
 ССЫЛКИ НА МОДЫ (Thunderstore)
