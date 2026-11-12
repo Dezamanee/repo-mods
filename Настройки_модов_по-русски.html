@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Настройки модов R.E.P.O. по-русски</title>
+<style>
+  body { font-family: Segoe UI, Arial, sans-serif; background:#14161a; color:#e8e8e8; margin:0; padding:24px 32px 60px; line-height:1.45; }
+  h1 { color:#8ee06a; margin:0 0 6px; font-size:26px; }
+  h2 { color:#ffd166; border-bottom:1px solid #33383f; padding-bottom:6px; margin-top:34px; font-size:20px; }
+  h3 { color:#9fd0ff; font-size:16px; margin-top:20px; }
+  p, li { font-size:14px; }
+  .note { background:#1d2128; border-left:4px solid #ffd166; padding:10px 14px; margin:14px 0; }
+  .warn { background:#241c1c; border-left:4px solid #ff6b6b; padding:10px 14px; margin:14px 0; }
+  table { border-collapse:collapse; width:100%; margin:10px 0 18px; font-size:13px; }
+  th, td { border:1px solid #2e343c; padding:6px 8px; vertical-align:top; text-align:left; }
+  th { background:#1d2128; color:#9fd0ff; position:sticky; top:0; }
+  tr:nth-child(even) td { background:#171a1f; }
+  code { background:#22272e; padding:1px 5px; border-radius:3px; color:#ffd166; font-size:12px; }
+  .file { color:#8ee06a; font-family:Consolas, monospace; font-size:13px; }
+  .def { color:#9aa4b2; white-space:nowrap; }
+  #q { width:100%; padding:10px 12px; font-size:14px; border-radius:6px; border:1px solid #33383f; background:#1d2128; color:#e8e8e8; margin:12px 0 4px; }
+  .hint { color:#9aa4b2; font-size:12px; margin-bottom:14px; }
+</style>
+</head>
+<body>
+
+<h1>Настройки модов R.E.P.O. по-русски</h1>
+<p class="hint">Сборка для R.E.P.O. v0.5.1 · обновлено 12.11.2026</p>
+
+<div class="note">
+<b>Как этим пользоваться.</b> Настройки можно менять двумя способами:
+<ol>
+<li><b>В игре:</b> главное меню → <b>MODS</b> → выбери мод → двигай ползунки/галочки. Часть значений меняется сразу, часть — после перезапуска игры.</li>
+<li><b>В файле:</b> <span class="file">BepInEx\config\&lt;файл&gt;.cfg</span> — открой Блокнотом, поменяй значение после знака <code>=</code>, сохрани и перезапусти игру.</li>
+</ol>
+</div>
+
+<div class="warn">
+<b>Почему названия в игре остаются английскими.</b> Имена настроек (например, <code>UpgradeItemSpawnChance</code>) — это ключи, по которым мод ищет своё значение. Если переименовать ключ, мод не найдёт настройку и создаст новую с английским именем и значением по умолчанию. Поэтому переводить можно только пояснения (в файлах они уже по-русски) и эту шпаргалку. Ищи настройку по английскому ключу в таблице.
+</div>
+
+<input id="q" placeholder="Поиск по названию настройки или по-русски…">
+<div class="hint">Например: «шанс», «деньги», «сложность», <code>Spawn</code>.</div>
+
+<h2>1. Магазинные предметы на локациях</h2>
+<p class="file">REPO_Shop_Items_in_Level.cfg</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
+<tr><td><code>SpawnUpgradeItems</code></td><td>Улучшения появляются на уровнях</td><td class="def">true</td><td>Выкл — улучшения только в магазине</td></tr>
+<tr><td><code>UpgradeItemSpawnChance</code></td><td>Шанс улучшения на точке спавна, %</td><td class="def">2.5</td><td>5–8 — заметно щедрее</td></tr>
+<tr><td><code>MapHideShopUpgradeItems</code></td><td>Прятать улучшения на карте</td><td class="def">true</td><td>Выкл — видно на карте</td></tr>
+<tr><td><code>SpawnDroneItems</code></td><td>Дроны появляются на уровнях</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>DroneItemsSpawnChance</code></td><td>Шанс дрона на точке спавна, %</td><td class="def">0.95</td><td>2–3 — дроны будут чаще</td></tr>
+<tr><td><code>MapHideDroneItems</code></td><td>Прятать дронов на карте</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>SpawnHealthPacksFromEnemies</code></td><td>Аптечка выпадает с врагов</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>HealthPackDropChance</code></td><td>Шанс дропа аптечки, %</td><td class="def">100</td><td>30–50 — если слишком легко</td></tr>
+<tr><td><code>UseShopPriceForItemSelection</code></td><td>Дешёвые предметы выпадают чаще</td><td class="def">true</td><td>Выкл — все предметы равновероятны</td></tr>
+</table>
+
+<h2>2. Кнопка продажи (TruckSell)</h2>
+<p class="file">com.trucksell.repo.cfg</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
+<tr><td><code>Sell Key</code></td><td>Клавиша продажи</td><td class="def">G</td><td>Любая клавиша</td></tr>
+<tr><td><code>Hold To Sell Seconds</code></td><td>Сколько держать клавишу, сек</td><td class="def">0.8</td><td>0.3 — быстрее</td></tr>
+<tr><td><code>Only Sell At Intermission</code></td><td>Продавать только в перерыве</td><td class="def">true</td><td>false — в любой момент в грузовике</td></tr>
+<tr><td><code>Check Truck Box For Held</code></td><td>Предмет должен быть в кузове</td><td class="def">true</td><td>false — достаточно держать в руках</td></tr>
+<tr><td><code>Refund Percent</code></td><td>Процент возврата денег</td><td class="def">60</td><td>100 — продажа без потерь</td></tr>
+<tr><td><code>Sell Props</code></td><td>Разрешить продавать снаряжение</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>Max Truck Box Side</code></td><td>Макс. размер кузова, м</td><td class="def">20</td><td>30 — если предметы «не в кузове»</td></tr>
+<tr><td><code>Truck Radius Fallback</code></td><td>Радиус кузова, если не определился, м</td><td class="def">20</td><td>—</td></tr>
+<tr><td><code>Show HUD</code></td><td>Показывать подсказку и результат</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>Language</code></td><td>Язык подсказок</td><td class="def">English</td><td>English или Chinese</td></tr>
+<tr><td><code>Allow Client Sell</code></td><td>Клиенты тоже могут продавать</td><td class="def">true</td><td>false — только хост</td></tr>
+<tr><td><code>Event Code</code></td><td>Сетевой код события</td><td class="def">173</td><td>Не менять без причины</td></tr>
+<tr><td><code>Debug Log</code></td><td>Отладка в лог</td><td class="def">true</td><td>Можно выключить</td></tr>
+</table>
+
+<h2>3. Список улучшений (Text Upgrades UI Scale)</h2>
+<p class="file">DarkSpider90.TextUpgradesUIScale.cfg</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
+<tr><td><code>EnableMod</code></td><td>Включить мод</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>AlignColumns</code></td><td>Уровень и название в одну строку</td><td class="def">true</td><td>Главный фикс наложения текста</td></tr>
+<tr><td><code>NameColumnOffset</code></td><td>Отступ названий слева</td><td class="def">1.5</td><td>2–2.5 — больше воздуха</td></tr>
+<tr><td><code>LineSpacing</code></td><td>Интервал между строками</td><td class="def">-4</td><td>-8 — компактнее, 0 — просторнее</td></tr>
+<tr><td><code>MaxTextWidthBeforeShrinking</code></td><td>Уменьшать при ширине больше</td><td class="def">0</td><td>0 = выключено</td></tr>
+<tr><td><code>StartShrinkingAfterUpgradesCount</code></td><td>С какого числа улучшений уменьшать</td><td class="def">10</td><td>6–8 — раньше</td></tr>
+<tr><td><code>ShrinkEveryUpgrades</code></td><td>Уменьшать каждые N улучшений</td><td class="def">2</td><td>—</td></tr>
+<tr><td><code>ShrinkStep</code></td><td>Шаг уменьшения (0.07 = 7%)</td><td class="def">0.07</td><td>—</td></tr>
+<tr><td><code>MinimumTextScale</code></td><td>Минимальный масштаб текста</td><td class="def">0.45</td><td>—</td></tr>
+</table>
+
+<h2>4. Меню модов (REPOConfig)</h2>
+<p class="file">nickklmao.repoconfig.cfg</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
+<tr><td><code>Show In Game</code></td><td>Показывать кнопку MODS в игре</td><td class="def">true</td></tr>
+</table>
+
+<h2>5. Роли (REPORoles Classic)</h2>
+<p class="file">R3Labs.Repo_Roles.Classic.cfg</p>
+<p>Названия и описания ролей уже переведены. Ниже — переключатели и клавиши.</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
+<tr><td><code>Enable Runner / Tank / Gambler / Strongman / Ranged Looter / Athletic / Mage / Reaper / Scout / Regular / Engineer</code></td><td>Включить роль (Бегун, Танк, Игрок, Силач, Дальнобой, Атлет, Маг, Жнец, Разведчик, Обычный, Инженер)</td><td class="def">true</td></tr>
+<tr><td><code>Your selected role</code></td><td>Выбранная роль (Random — случайная)</td><td class="def">Random</td></tr>
+<tr><td><code>Reaasign roles after being revived</code></td><td>Выдавать новую роль после воскрешения</td><td class="def">false</td></tr>
+<tr><td><code>Place where mana is shown</code></td><td>Показывать шкалу маны</td><td class="def">true</td></tr>
+<tr><td><code>Enable Role Upgrades in Shop</code></td><td>Улучшения ролей в магазине</td><td class="def">true</td></tr>
+<tr><td><code>GUI Toggle Key</code></td><td>Клавиша показа роли</td><td class="def">R</td></tr>
+<tr><td><code>Activate Scout Ability</code> / <code>Show Spells</code> / <code>Healing Spell</code> / <code>Speed Spell</code> / <code>Overcharge Spell</code> / <code>Jump Boost Spell</code> / <code>Stamina Refill Spell</code> / <code>Charge Held Item</code></td><td>Клавиши способностей (Разведчик, Маг и т.д.)</td><td class="def">G / M / H / J / O / K / N / C</td></tr>
+</table>
+
+<h2>6. Сложность и экономика (IncreaseDifficultyMod)</h2>
+<p class="file">com.kubai.increasehardmod.cfg</p>
+<p>В моде 405 настроек. Ниже — главные, остальные лежат в тех же разделах файла.</p>
+
+<h3>Рост сложности</h3>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
+<tr><td><code>RampStartLevel</code></td><td>С какого уровня начинается рост сложности</td><td class="def">4</td><td>1 — с самого начала</td></tr>
+<tr><td><code>RampLevelsPerStep</code></td><td>Через сколько уровней усиливать шаг</td><td class="def">1</td><td>2 — мягче</td></tr>
+<tr><td><code>HealthPerLevel</code></td><td>Прибавка HP врагов за уровень</td><td class="def">0.15</td><td>0.25 — жёстче</td></tr>
+<tr><td><code>HealthMaxMultiplier</code></td><td>Потолок HP врагов</td><td class="def">3</td><td>—</td></tr>
+<tr><td><code>DamagePerLevel</code></td><td>Прибавка урона врагов за уровень</td><td class="def">0.1</td><td>—</td></tr>
+<tr><td><code>SpeedPerLevel</code></td><td>Прибавка скорости врагов за уровень</td><td class="def">0.06</td><td>—</td></tr>
+<tr><td><code>RespawnFasterPerLevel</code></td><td>Насколько быстрее респавн за уровень</td><td class="def">0.08</td><td>—</td></tr>
+</table>
+
+<h3>Размер карты, враги, квота</h3>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
+<tr><td><code>MapValuePerLevel</code></td><td>Рост стоимости лута за уровень</td><td class="def">0.02</td></tr>
+<tr><td><code>EnemyCountPerLevel</code></td><td>Прибавка количества врагов за уровень</td><td class="def">0.03</td></tr>
+<tr><td><code>EnemyCountStartLevel</code></td><td>С какого уровня добавляются враги</td><td class="def">8</td></tr>
+<tr><td><code>LevelSizePerLevel</code></td><td>Рост размера уровня за уровень</td><td class="def">0.03</td></tr>
+<tr><td><code>QuotaPerLevel</code></td><td>Рост квоты за уровень</td><td class="def">0.1</td></tr>
+<tr><td><code>QuotaMaxMultiplier</code></td><td>Потолок квоты</td><td class="def">5</td></tr>
+<tr><td><code>ExtractionBonusInterval</code></td><td>Каждые N уровней — доп. точка сдачи</td><td class="def">10</td></tr>
+<tr><td><code>MoonLevelsPerPhase</code></td><td>Уровней на фазу луны</td><td class="def">5</td></tr>
+</table>
+
+<h3>Магазин</h3>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
+<tr><td><code>ExtraItems</code></td><td>Сколько доп. предметов в магазине</td><td class="def">4</td></tr>
+<tr><td><code>ExtraUpgrades</code></td><td>Сколько доп. улучшений в магазине</td><td class="def">3</td></tr>
+<tr><td><code>DuplicatesExtra</code></td><td>Доп. копии одинаковых предметов</td><td class="def">0</td></tr>
+<tr><td><code>PriceBaselinePlayers</code></td><td>Число игроков, от которого считается цена</td><td class="def">4</td></tr>
+<tr><td><code>PricePerExtraPlayer</code></td><td>Наценка за каждого игрока сверх</td><td class="def">0.15</td></tr>
+<tr><td><code>EventChancePercent</code></td><td>Шанс события экономики, %</td><td class="def">50</td></tr>
+</table>
+
+<h3>Прочее</h3>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th></tr>
+<tr><td><code>MaxPlayers</code></td><td>Максимум игроков в лобби</td><td class="def">6</td></tr>
+<tr><td><code>ShowSeconds</code></td><td>Сколько секунд показывать итоги раунда</td><td class="def">20</td></tr>
+<tr><td><code>ToggleKey</code></td><td>Клавиша итогов раунда</td><td class="def">F7</td></tr>
+<tr><td><code>Key</code> (раздел Black Market)</td><td>Клавиша чёрного рынка в магазине</td><td class="def">B</td></tr>
+<tr><td><code>ShrineChancePercent</code></td><td>Шанс появления алтаря (испытания), %</td><td class="def">100</td></tr>
+<tr><td><code>MinPlayerDistance</code></td><td>Дистанция, с которой лут не добивается, м</td><td class="def">20</td></tr>
+<tr><td><code>RevealOnMap</code></td><td>Показывать добранный лут на карте</td><td class="def">true</td></tr>
+</table>
+
+<h2>7. Вариации карт (Interesting Levels)</h2>
+<p class="file">interestinglevels.repo.cfg</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>По умолчанию</th><th>Совет</th></tr>
+<tr><td><code>Enabled</code></td><td>Включить мод</td><td class="def">true</td><td>Нужен только хосту</td></tr>
+<tr><td><code>Layout variety</code></td><td>Свои формы карт</td><td class="def">true</td><td>Выкл — планировка игры</td></tr>
+<tr><td><code>Shape weight: winding</code></td><td>Вес «длинных извилистых» карт</td><td class="def">25</td><td>Сумма весов не важна</td></tr>
+<tr><td><code>Shape weight: hub</code></td><td>Вес карт «центр + лучи»</td><td class="def">25</td><td>—</td></tr>
+<tr><td><code>Shape weight: compact</code></td><td>Вес компактных плотных карт</td><td class="def">20</td><td>—</td></tr>
+<tr><td><code>Shape weight: classic</code></td><td>Вес родной генерации игры</td><td class="def">30</td><td>Больше — ближе к ванили</td></tr>
+<tr><td><code>Loop frequency</code></td><td>Частота вторых проходов (0–1)</td><td class="def">0.5</td><td>—</td></tr>
+<tr><td><code>Branch frequency</code></td><td>Частота тупиковых ответвлений</td><td class="def">0.5</td><td>—</td></tr>
+<tr><td><code>Depth gradient</code></td><td>Дальше от грузовика — сложнее и богаче</td><td class="def">0.5</td><td>—</td></tr>
+<tr><td><code>Verticality bias</code></td><td>Любовь к лестницам и верхним этажам</td><td class="def">1</td><td>0–2</td></tr>
+<tr><td><code>Special rooms</code></td><td>Хранилища, скрытые и опасные комнаты</td><td class="def">true</td><td>—</td></tr>
+<tr><td><code>Vault chance</code></td><td>Шанс хранилища на карту</td><td class="def">0.3</td><td>—</td></tr>
+<tr><td><code>Fixed seed</code></td><td>Фиксировать генерацию (0 = случайно)</td><td class="def">0</td><td>Для тестов</td></tr>
+<tr><td><code>Leave these levels alone</code></td><td>Карты без изменений (имена через запятую)</td><td class="def"></td><td>—</td></tr>
+</table>
+
+<h2>8. Используемые ценности (Usable Valuables)</h2>
+<p class="file">vibez.UsableValuables.cfg</p>
+<p>Настройки сгруппированы по предметам: <code>[BananaBow]</code>, <code>[Blender]</code>, <code>[Camera]</code> и т.д. В каждом разделе <code>Enabled</code> — включить поведение предмета. Часть настроек действует только у хоста.</p>
+<table class="tbl">
+<tr><th>Ключ</th><th>По-русски</th><th>Пример</th></tr>
+<tr><td><code>Enabled</code></td><td>Включить эффект предмета</td><td class="def">true</td></tr>
+<tr><td><code>ExplodeChancePerSecond</code></td><td>Шанс взрыва в секунду, %</td><td class="def">3</td></tr>
+<tr><td><code>WindupSeconds</code></td><td>Сколько горит фитиль, сек</td><td class="def">2</td></tr>
+<tr><td><code>ExplosionSize</code></td><td>Размер взрыва (бочка = 1)</td><td class="def">1</td></tr>
+<tr><td><code>PlayerDamage</code> / <code>EnemyDamage</code></td><td>Урон игрокам / врагам</td><td class="def">50 / 100</td></tr>
+<tr><td><code>WarningVolume</code> / <code>WarningFalloff</code></td><td>Громкость и дальность предупреждения</td><td class="def">1 / 1.5</td></tr>
+<tr><td><code>ReactivateChancePerSecond</code></td><td>Шанс самовключения в секунду, %</td><td class="def">30</td></tr>
+</table>
+
+<h2>Где лежат остальные настройки</h2>
+<table class="tbl">
+<tr><th>Файл</th><th>Мод</th></tr>
+<tr><td class="file">com.kubai.increasehardmod.cfg</td><td>Сложность, экономика, магазин, враги — 405 настроек</td></tr>
+<tr><td class="file">interestinglevels.repo.cfg</td><td>Генерация карт — 93 настройки</td></tr>
+<tr><td class="file">vibez.UsableValuables.cfg</td><td>Поведение предметов — 84 настройки</td></tr>
+<tr><td class="file">R3Labs.Repo_Roles.Classic.cfg</td><td>Роли — 47 настроек</td></tr>
+<tr><td class="file">com.trucksell.repo.cfg</td><td>Продажа — 13 настроек</td></tr>
+<tr><td class="file">REPO_Shop_Items_in_Level.cfg</td><td>Предметы на локациях — 10 настроек</td></tr>
+<tr><td class="file">DarkSpider90.TextUpgradesUIScale.cfg</td><td>Список улучшений — 9 настроек</td></tr>
+</table>
+
+<div class="note">Комментарии в файлах <code>REPO_Shop_Items_in_Level.cfg</code>, <code>com.trucksell.repo.cfg</code>, <code>DarkSpider90.TextUpgradesUIScale.cfg</code> и <code>nickklmao.repoconfig.cfg</code> уже переведены на русский — можно читать прямо в блокноте.
+В больших конфигах (<code>increasehardmod</code>, <code>interestinglevels</code>, <code>UsableValuables</code>) комментарии пока английские: ориентируйся по этой таблице.</div>
+
+<script>
+document.getElementById('q').addEventListener('input', function(e){
+  var q = e.target.value.toLowerCase().trim();
+  document.querySelectorAll('table.tbl').forEach(function(t){
+    Array.prototype.slice.call(t.rows, 1).forEach(function(r){
+      r.style.display = (!q || r.innerText.toLowerCase().indexOf(q) !== -1) ? '' : 'none';
+    });
+  });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+==========================================================
+  R.E.P.O. — СБОРКА МОДОВ (v0.5.1, Steam)
+  Версия сборки: 1.1
+  Проверено: 12.11.2026
+==========================================================
+
+ЧТО ВНУТРИ
+----------
+Сборка ставится поверх чистой игры и добавляет:
+
+ВАЖНО: IncreaseDifficultyMod (пункт 4) не входит в этот архив —
+его файл весит 119 МБ, а GitHub не принимает файлы больше 100 МБ.
+Скачай его отдельно отсюда:
+https://thunderstore.io/c/repo/p/WhitesLove/IncreaseDifficultyMod/
+и положи IncreaseDifficultyMod.zip в папку "Моды" перед установкой.
+Без него сборка тоже работает (установщик пропустит этот мод).
+
+1) Магазинные предметы на локациях
+   Shop Items Spawn in Level 1.7.21
+   Улучшения, дроны и аптечки теперь можно найти прямо на уровне
+   как лут. Найденное можно занести в точку эвакуации — предмет
+   уедет в лобби и будет ждать в следующем забеге.
+   Шанс спавна настраивается (по умолчанию 2.5%).
+
+2) Классы игроков
+   REPORoles Classic 3.0.2
+   Роль выдаётся на каждый уровень (можно выбрать вручную):
+   Tank (двойное HP, медленнее), Runner, Strongman, Mage, Reaper,
+   Scout, Engineer, Gambler, Athletic, Ranged Looter, Regular.
+   Клавиша R — посмотреть свою роль.
+   ВАЖНО: мод нужен ВСЕМ игрокам в лобби.
+
+   РУССКИЕ РОЛИ: названия и описания ролей переведены на русский.
+   Файл "Русские_роли_REPORoles.cfg" в корне архива — это конфиг мода.
+   Установщик сам кладёт его в BepInEx\config (если файла ещё нет).
+   Вручную: скопируй "Русские_роли_REPORoles.cfg" в
+   BepInEx\config\R3Labs.Repo_Roles.Classic.cfg
+   Английскими останутся только жёстко зашитые в DLL подписи
+   (заголовок "REPO ROLES CLASSIC", кнопки, список выбора роли).
+
+3) Кнопка продажи
+   TruckSell 0.1.6
+   В грузовике между уровнями зажми G на 0.8 сек с предметом в руках —
+   предмет превращается в деньги (возврат 60%).
+   Работает и у хоста, и у клиентов. Настраивается в конфиге.
+
+4) Выбор сложности + доп. контент
+   IncreaseDifficultyMod 0.10.3
+   Настраиваемая сложность (пресеты и тонкая настройка), транквилизатор
+   Spritz, новые ценные предметы с физикой, оружие, дроны, улучшения,
+   чёрный рынок, статистика забега. Есть русский язык.
+   Сложность и все ползунки — в меню Mods (REPOConfig) или в
+   BepInEx\config\com.kubai.increasehardmod.cfg
+
+5) Новые вариации локаций
+   Interesting Levels 1.4.3
+   Каждая карта ощущается новой: другие планировки, тематические
+   комнаты с лутом, рискованные короткие пути, гнёзда монстров,
+   джекпот-предметы и модификаторы уровня.
+   Работает и с модовыми картами/предметами. Достаточно хоста.
+
+6) Новая локация
+   The Facility 1.1.7
+   Отдельная кастомная карта в стиле игры + свои ценные предметы.
+   Появляется в пуле уровней наравне с ванильными.
+
+7) Много новых предметов
+   JustOtakus Valuables 0.3.0
+   Большой набор новых ценностей и предметов для переноски и продажи.
+
+   SusScraps Valuables 1.0.7
+   87 новых ценностей (Warframe, Resident Evil, Dark Souls/Elden Ring,
+   Destiny, Minecraft, LEGO и др.) — находятся на уровнях и продаются
+   как обычный лут.
+
+8) Предметы, с которыми можно взаимодействовать
+   Usable Valuables 0.2.0
+   Возьми ценность в руки и нажми E — фонарик, бумбокс, свеча, пилы,
+   ловушки, огнемёт, палочки, камера. Некоторые предметы ведут себя
+   сами по себе (и могут подставить).
+   ВАЖНО: часть фишек (губка, банан-лук) на игре 0.5.x не работает —
+   мод писался под более старую версию. Остальные предметы работают.
+
+9) Фиксы текста и шрифтов
+   Russian Font Fix 1.0.1
+   Лечит отрисовку кириллицы в официальном русском переводе и
+   разводит названия улучшений по своим ячейкам, чтобы текст
+   не наезжал друг на друга.
+
+   Text Upgrades UI Scale 1.4.1
+   Уменьшает/подгоняет текст списка улучшений, чтобы он не вылезал
+   за пределы экрана и не накладывался на соседние строки.
+
+Зависимости (ставятся автоматически):
+   BepInExPack 5.4.2305, REPOLib 4.3.0, MenuLib 2.6.2,
+   REPOConfig 1.2.7, FixPluginTypesSerialization 1.1.2
+
+РУССКИЕ НАСТРОЙКИ
+-----------------
+Рядом с игрой (и в корне архива) лежит файл
+"Настройки_модов_по-русски.html" — открой его браузером.
+Там таблицы: английский ключ настройки -> что он значит по-русски ->
+значение по умолчанию -> совет. Есть поиск по словам ("шанс", "деньги").
+
+В файлах REPO_Shop_Items_in_Level.cfg, com.trucksell.repo.cfg,
+DarkSpider90.TextUpgradesUIScale.cfg и nickklmao.repoconfig.cfg
+комментарии к настройкам переводились на русский, но BepInEx
+при каждом запуске игры перезаписывает их английскими (описания
+берутся из кода мода). Поэтому ориентируйся на шпаргалку —
+она не пропадает.
+
+Значения, которые ты вписал сам (шансы, ключи, проценты), НЕ
+сбрасываются: сохраняются только строки-значения, а не комментарии.
+Русские названия и описания ролей тоже сохраняются — это значения.
+
+ВАЖНО: сами названия настроек в меню MODS остаются английскими.
+Это ключи, по которым моды ищут значения; если их переименовать,
+мод не найдёт настройку и сбросит её на значение по умолчанию.
+Поэтому ищи нужную строку по таблице в шпаргалке.
+
+Про меню модов: список модов рисуется поверх главного меню — это
+штатное поведение REPOConfig (главное меню просто затемняется),
+а не баг. Обрезанные длинные названия и панель ролей справа —
+особенности самих модов.
+
+----------------------------------------------------------
+БЫСТРАЯ УСТАНОВКА (рекомендуется)
+----------------------------------------------------------
+1. Закрой игру и Thunderstore Mod Manager.
+2. Распакуй архив в любую папку.
+3. Запусти "Установить.bat".
+4. Если путь к игре не найдётся сам — вставь его вручную, например:
+   C:\steam\steamapps\common\REPO
+   (папка, в которой лежит REPO.exe)
+5. Дождись надписи "ГОТОВО" и запускай игру через Steam.
+
+Скрипт сам сделает бэкап winhttp.dll и doorstop_config.ini
+в папку backups внутри папки игры.
+
+----------------------------------------------------------
+РУЧНАЯ УСТАНОВКА (если .bat не запускается)
+----------------------------------------------------------
+1. Открой папку игры (там, где REPO.exe).
+2. Из "Моды\BepInExPack.zip" распакуй ВСЁ содержимое папки
+   BepInExPack прямо в папку игры. Должны появиться:
+   winhttp.dll, doorstop_config.ini, папка BepInEx.
+   Существующие файлы заменяем.
+3. Для каждого мода из папки "Моды" создай свою папку в
+   BepInEx\plugins и положи туда ВСЁ, кроме README/CHANGELOG/
+   icon.png/manifest.json:
+
+   BepInEx\plugins\REPOLib\REPOLib.dll
+   BepInEx\plugins\MenuLib\MenuLib.dll
+   BepInEx\plugins\REPOConfig\REPOConfig.dll
+   BepInEx\plugins\REPORoles_Classic\Repo_Roles_Classic.dll
+       (+ REPORoles_assets1 и REPORoles_assets2 в ту же папку)
+   BepInEx\plugins\Shop_Items_Spawn_in_Level\REPO_Shop_Items_in_Level.dll
+   BepInEx\plugins\TruckSell\TruckSell.dll
+   BepInEx\plugins\IncreaseDifficultyMod\IncreaseDifficultyMod.dll
+   BepInEx\plugins\InterestingLevels\InterestingLevels.dll
+   BepInEx\plugins\TheFacility\TheFacility.repobundle
+   BepInEx\plugins\JustOtakus_Valuables\JustOtakus_Valuables.dll
+       (+ JustOtakus_Valuables.repobundle туда же)
+   BepInEx\plugins\SusScrapsValuables\SusScrapsValuables.repobundle
+   BepInEx\plugins\UsableValuables\UsableValuables.dll
+       (+ папка audio со звуками в ту же папку)
+   BepInEx\plugins\TextUpgradesUIScale\TextUpgradesUIScale.dll
+
+   Russian_Font_Fix распакуй в папку BepInEx (внутри уже пути
+   plugins\RepoRussianFixes.dll и plugins\Fonts\*.ttf).
+
+   .repobundle — это ассеты, их грузит REPOLib. Без них мод
+   с картой или предметами работать не будет.
+
+4. FixPluginTypesSerialization.zip распакуй в корень игры
+   (внутри уже правильные пути: BepInEx\patchers\...).
+5. Запусти игру через Steam один раз — создадутся конфиги.
+
+----------------------------------------------------------
+УПРАВЛЕНИЕ
+----------------------------------------------------------
+R              — показать свою роль (REPORoles Classic)
+G (удерживать) — продать предмет в грузовике (TruckSell)
+E              — использовать ценность в руках (Usable Valuables)
+Настройки модов — главное меню игры -> Mods (REPOConfig),
+                 там же сложность и шансы спавна.
+
+Конфиги (если править руками):
+  BepInEx\config\REPO_Shop_Items_in_Level.cfg   — шансы спавна
+  BepInEx\config\com.trucksell.repo.cfg         — клавиша, % возврата
+  BepInEx\config\R3Labs.Repo_Roles.Classic.cfg  — роли и кулдауны
+  BepInEx\config\com.kubai.increasehardmod.cfg  — сложность
+
+----------------------------------------------------------
+МУЛЬТИПЛЕЕР
+----------------------------------------------------------
+- REPORoles Classic: мод и ОДНА И ТА ЖЕ версия нужны всем в лобби.
+- Shop Items Spawn in Level: достаточно хоста.
+- Interesting Levels: достаточно хоста.
+- TruckSell: работает у всех, но настройки берутся с хоста.
+- IncreaseDifficultyMod: сложность задаёт хост.
+- The Facility, JustOtakus/SusScraps Valuables, Usable Valuables:
+  контент появляется у всех, но стабильнее ставить всем одинаково.
+
+Правило простое: если хотите без сюрпризов — поставьте сборку
+всем одинаково.
+
+----------------------------------------------------------
+ЕСЛИ ЧТО-ТО НЕ РАБОТАЕТ
+----------------------------------------------------------
+1. Игра запускается без модов:
+   проверьте, что в папке игры есть BepInEx\core\BepInEx.Preloader.dll
+   и winhttp.dll. Если файлы не появились — установка не прошла.
+2. Мод не грузится / вылет:
+   откройте BepInEx\LogOutput.log в папке игры и найдите строки [Error].
+3. Не видно новых карт/предметов:
+   проверьте, что .repobundle лежат рядом с .dll в папке мода
+   (в логе должно быть "REPOLib: Loading bundle at ...").
+4. После обновления игры моды могут отвалиться — обновите их
+   с Thunderstore (ссылки ниже) под новую версию.
+5. Steam «проверка целостности файлов» удалит моды — это нормально,
+   просто поставьте сборку заново.
+6. Полное удаление модов: удалите папку BepInEx, файлы winhttp.dll
+   и doorstop_config.ini из папки игры.
+
+----------------------------------------------------------
+ССЫЛКИ НА МОДЫ (Thunderstore)
+----------------------------------------------------------
+BepInExPack               https://thunderstore.io/c/repo/p/BepInEx/BepInExPack/
+REPOLib                   https://thunderstore.io/c/repo/p/Zehs/REPOLib/
+MenuLib                   https://thunderstore.io/c/repo/p/nickklmao/MenuLib/
+REPOConfig                https://thunderstore.io/c/repo/p/nickklmao/REPOConfig/
+Shop Items Spawn in Level https://thunderstore.io/c/repo/p/itsUndefined/Shop_Items_Spawn_in_Level/
+REPORoles Classic         https://thunderstore.io/c/repo/p/R3Labs/REPORoles_Classic/
+TruckSell                 https://thunderstore.io/c/repo/p/Aartyns/TruckSell/
+IncreaseDifficultyMod     https://thunderstore.io/c/repo/p/WhitesLove/IncreaseDifficultyMod/
+Interesting Levels        https://thunderstore.io/c/repo/p/ExtraCreamyMilk/InterestingLevels/
+The Facility              https://thunderstore.io/c/repo/p/grey5525/TheFacility/
+JustOtakus Valuables      https://thunderstore.io/c/repo/p/JustOtaku/JustOtakus_Valuables/
+SusScraps Valuables       https://thunderstore.io/c/repo/p/Suscubus/SusScrapsValuables/
+Usable Valuables          https://thunderstore.io/c/repo/p/vibez/UsableValuables/
+Russian Font Fix          https://thunderstore.io/c/repo/p/kirillich611/Russian_Font_Fix/
+Text Upgrades UI Scale    https://thunderstore.io/c/repo/p/DarkSpider/TextUpgradesUIScale/
+FixPluginTypesSerialization https://thunderstore.io/c/repo/p/DaXcess/FixPluginTypesSerialization/
+
+Приятной смены!
